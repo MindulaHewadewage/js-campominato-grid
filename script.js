@@ -1,34 +1,43 @@
 // Funzione per creare una cella
-function createCell(){
+function createCell(content){
     const cell = document.createElement('div');
     cell.classList.add('cell');
-    grid.appendChild(cell);
+    cell.append(content);
+    return cell;
 }
 
 
 
 // Prendo gli elementi dal DOM
 const button = document.getElementById('button');
-const sectionContainer = document.getElementById('section-container');
+const sectionBackground = document.getElementById('section-background');
 const grid = document.getElementById('grid'); 
 
 // struttura della griglia
-const rows = 8;
-const cols = 8;
+const rows = 10;
+const cols = 10;
 const totalCells = rows * cols;
 
 // Aggancio il bottone
 button.addEventListener('click', function (){
 
     // levo il display none 
-    sectionContainer.classList.remove('d-none');
+    // sectionBackground.classList.add('d-none');
 
     // si riportano le celle in pagina
-    for(let i = 0; i > totalCells; i++){
+    for(let i = 1; i < totalCells; i++){
 
         // creo una cella
-        createCell();
-    }
+        const cell = createCell(i);
 
+
+        // Event listener alla cella
+        cell.addEventListener('click' , function (){
+            cell.classList.add('clicked');
+        })
+
+        // appendo in pagina
+        grid.appendChild(cell);
+    }
 
 })

@@ -36,13 +36,17 @@ header{
 }
 
 /* Grid */
+.section-background{
+    background-color: #7FFFD4;
+
+}
+
+
 #section-container{
     max-width: 800px;
     padding-top: 50px;
     height: 100%;
-}
-.section-background{
-    background-color: #7FFFD4;
+    margin: 0 auto;
 
 }
 
@@ -50,20 +54,25 @@ header{
     height: 800px;
     width: 800px;
     border: 1px solid black;
+    margin: 0 auto;
 
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: center;
+
 }
 
-#cell{
+.cell{
     height: calc(100% / 10);
     width: calc(100% / 10);
     border: 1px solid white;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#cell .clicked{
+.cell.clicked{
     background-color: dodgerblue;
 }
