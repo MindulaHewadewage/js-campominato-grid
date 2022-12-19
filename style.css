@@ -28,7 +28,7 @@ header{
     margin:0 20px;
 }
 
-#button{
+button{
     padding: 0px 30px;
     border-radius: 5px;
     margin-right: 10px;
@@ -36,7 +36,7 @@ header{
 }
 
 /* Grid */
-.section-background{
+#section-background{
     background-color: #7FFFD4;
 
 }
@@ -53,7 +53,6 @@ header{
 #grid{
     height: 800px;
     width: 800px;
-    border: 1px solid black;
     margin: 0 auto;
 
     display: flex;
